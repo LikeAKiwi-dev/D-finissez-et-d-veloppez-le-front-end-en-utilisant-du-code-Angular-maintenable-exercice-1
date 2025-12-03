@@ -68,15 +68,15 @@ export class CountryCardComponent implements OnChanges, OnDestroy {
         labels: years,
         datasets: [
           {
-            label: 'Médailles par année',
+            label: 'countries',
             data: medalsByYear,
-            fill: false,
-            tension: 0.25
+            backgroundColor: '#0b868f'
           }
         ]
       },
       options: {
         responsive: true,
+        aspectRatio: 2.5,
         plugins: {
           legend: { display: true }
         }

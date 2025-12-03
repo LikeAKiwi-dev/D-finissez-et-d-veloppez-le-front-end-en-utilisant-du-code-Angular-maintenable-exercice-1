@@ -56,14 +56,15 @@ export class MedalChartComponent implements OnChanges, OnDestroy {
       type: 'pie',
       data: {
         labels,
-        datasets: [
-          {
-            data,
-            // tu peux ajouter ici backgroundColor si tu veux
-          }
-        ]
+        datasets: [{
+          label: 'Medals',
+          data: data,
+          backgroundColor: ['#0b868f', '#adc3de', '#7a3c53', '#8f6263', 'orange', '#94819d'],
+          hoverOffset: 4
+        }],
       },
       options: {
+        aspectRatio: 2.5,
         responsive: true,
         onClick: (event, elements) => {
           if (elements.length > 0) {
